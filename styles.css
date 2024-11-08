@@ -1,0 +1,411 @@
+/*HTML Styling*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("background3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+/* Header section */
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+p.text-muted {
+  font-size: 2rem;
+  text-align: center;
+}
+
+hr {
+  border-top: 2px solid #333;
+  width: 80%;
+  margin-top: 10px;
+}
+
+/* About Me and Summary Letter Styling */
+.mt-4 p::first-letter {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #ff6347;
+  float: left;
+  line-height: 1;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.mt-4 p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  margin-top: 1.5rem;
+
+  /* Card-like background styling */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+}
+
+/* Sidebar styling */
+aside h4 {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+aside .badge {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.badge-primary {
+  background-color: #333;
+}
+.badge-secondary {
+  background-color: #333;
+}
+aside ul.list-unstyled li {
+  padding: 8px 0;
+}
+aside ul.list-unstyled a {
+  color: #333;
+  text-decoration: none;
+}
+aside ul.list-unstyled a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* Apply scaling effect to individual list items */
+aside .mb-4 .list-inline-item {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Scale up the item when hovered */
+aside .mb-4 .list-inline-item:hover {
+  transform: scale(1.2);
+  background-color: #ff6347;
+  transform-origin: center;
+}
+
+/* Main content styling */
+main h3 {
+  color: #333;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-top: 1.5rem;
+}
+
+/* Main content card styling */
+main .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Card Header Styling */
+main .card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+/* Content Styling (Initially hidden) */
+main .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: #333;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+/* Card Hover Effect */
+main .card:hover .card-body {
+  transform: translateY(0);
+  opacity: 1;
+  color: white;
+  background-color: #ff6347;
+}
+
+/*Add a smooth effect to the card header */
+main .card:hover .card-header {
+  opacity: 0.7;
+}
+
+/* Style for the Rectangular Image Holder */
+.image-holder {
+  width: 100%;
+  max-width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border: 3px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the Image */
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Back to Top Arrow styling */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: none;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  background-color: #ff6347;
+}
+
+.back-to-top i {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Sidebar Open (When Toggled) */
+.sidebar.open {
+  transform: translateX(250px);
+}
+
+/* Pull Arrow Styling */
+.pull-arrow {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1002;
+  transition: background-color 0.3s ease;
+  transform: translateY(-50%);
+}
+
+/* Form Styling */
+.sidebar form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar input[type="text"],
+.sidebar input[type="email"],
+.sidebar textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus Effect */
+.sidebar input[type="text"]:focus,
+.sidebar input[type="email"]:focus,
+.sidebar textarea:focus {
+  border-color: #87ceeb;
+  outline: none;
+}
+
+/* Textarea Styling */
+.sidebar textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+/* Submit Button Styling */
+.sidebar button {
+  padding: 10px;
+  background-color: #ff6347;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Button Hover Effect */
+.sidebar button:hover {
+  background-color: #0066cc;
+}
+
+/* Label Styling */
+.sidebar label {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Change arrow direction */
+.pull-arrow i {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .image-holder {
+    max-width: 250px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-size: 3rem;
+  }
+  p.text-muted {
+    font-size: 1.5rem;
+  }
+
+  .image-holder {
+    max-width: 200px;
+    height: 350px;
+  }
+
+  main h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .image-holder {
+    max-width: 180px;
+    height: 300px;
+  }
+
+  main .card {
+    height: 120px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .image-holder {
+    max-width: 150px;
+    height: 250px;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+  }
+}
